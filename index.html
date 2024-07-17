@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PASSWORD GENERATOR</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
     <div class="container">
       <h1>Password Generator</h1>
-      <div class="inputBox">
+      <div class="inputBox" id="inputBox">
         <input type="text" class="passBox" id="passBox" disabled />
+        <span class="material-symbols-outlined" id="copyIcon"
+          >content_copy</span
+        >
       </div>
       <input type="range" min="1" max="30" value="8" id="inputSlider" />
       <div class="row">
@@ -20,21 +27,23 @@
       </div>
       <div class="row">
         <label for="lowercase">Include lowercase letters (a - z)</label>
-        <input type="checkbox" name="lowercase" id="lowercase" />
+        <input type="checkbox" name="lowercase" id="lowercase" checked />
       </div>
       <div class="row">
         <label for="uppercase">Include uppercase letters (A-Z)</label>
-        <input type="checkbox" name="uppercase" id="uppercase" />
+        <input type="checkbox" name="uppercase" id="uppercase" checked />
       </div>
       <div class="row">
         <label for="numbers">Include numbers letters (0-9)</label>
-        <input type="checkbox" name="numbers" id="numbers" />
+        <input type="checkbox" name="numbers" id="numbers" checked />
       </div>
       <div class="row">
         <label for="symbols">Include symbols letters (#,@,$,...)</label>
-        <input type="checkbox" name="symbols" id="symbols" />
+        <input type="checkbox" name="symbols" id="symbols" checked/>
       </div>
-      <button type="button" class="genBtn" id="genBtn">Generate Password</button>
+      <button type="button" class="genBtn" id="genBtn">
+        Generate Password
+      </button>
     </div>
     <script src="script.js"></script>
   </body>
